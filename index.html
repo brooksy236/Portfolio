@@ -5,41 +5,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>David Brooks' Portfolio Page</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <!-- main logo / nav -->
   <header>
-    <h1>Lernantino</h1>
-    <nav>
+    <h1>David Brooks</h1>
+    <nav id="navBar">
+      <div id="navigation">
+        <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#resume">Résume</a></li>
+      </ul>
+      </div>
     </nav>
   </header>
 
   <!-- hero banner -->
   <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
+    <div id="profile-pic"></div>
+    <h2 id="heroSubTitle">Have a look at my work!</h2>
   </section>
 
   <main class="page-wrapper">
     <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
-    </section>
+      <h2 id="about-me-header">About Me</h2>
+      <p id="about-me-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    
+      <h2 id="work-header">Work</h2>
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-    </section>
+      <a href="http://www.google.com" target="blank" id="work-content4" class="work">
+    <section>
+      <div class="work-content-heading">work-content</div>
+    </section></a>
+
+    <a href="http://www.google.com" target="blank" id="work-content2" class="work">
+    <section>
+      <div class="work-content-heading">work-content</div>
+    </section></a>
+
+    <a href="http://www.google.com" target="blank" id="work-content3" class="work">
+    <section>
+      <div class="work-content-heading">work-content</div>
+    </section></a>
+    
+    <a href="http://www.google.com" target="blank" id="work-content1" class="work">
+    <section>
+      <div class="work-content-heading">work-content</div>
+    </section></a>
+
+    <a href="http://www.google.com" target="blank" id="work-content5" class="work">
+    <section>
+      <div class="work-content-heading">work-content</div>
+    </section></a>
 
     <!-- contact -->
-    <section class="page-section contact" id="contact">
+    <section class="page-section" id="contact-header">
       <h2>Contact Me</h2>
     </section>
+    <section id="contact-content">
+      <ul>
+        <li><a href="#">555-555</a></li>
+        <li><a href="#">mywebsite.com</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </section>
+
   </main>
+
+
 </body>
 
 </html>

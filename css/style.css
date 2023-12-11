@@ -1,12 +1,92 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+}
+
+/* This section is for the header and links */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: darkslategray;
+  color: lightslategray;
+}
+
+header h1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 ;
+  min-width: 300px;
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: cornsilk;
+
+}
+
+/* This section is for the hero banner */
+
+.hero-banner {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  background-image: url("/images/02-hero-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+#profile-pic {
+  display: flex;
+  /* justify-content: left; */
+  /* align-self: flex-end; */
+  background-image: url("/images/Profile1.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#heroSubTitle {
+  display: flex;
+  justify-content: right;
+  align-self: flex-end;
+  font-size: 40px;
+  color: rgb(20,20,255) ;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: auto;
+  border: 2px solid black;
 }
 
 h1,
@@ -17,7 +97,153 @@ h5,
 h6 {
   margin: 0;
 }
+h2 {
+  font-size: 36px;
+}
 
 p {
   margin: 0;
+}
+
+/* Grid */
+
+main {
+  background-color: rgb(146,204,206);
+  border: 10px;
+}
+
+.page-wrapper {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 300px 300px 300px 300px 1fr;
+  /* grid-template-rows: min-content auto; */
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+      "about-me-header about-me-content about-me-content"
+      "work-header work-content1 work-content1"
+      "work-header work-content1 work-content1"
+      "work-header work-content2 work-content3"
+      "work-header work-content4 work-content5"
+      "contact contact-content contact-content";
+}
+
+#about {
+  display: inline-block;
+  grid-area: about;
+}
+
+#about-me-header {
+  grid-area: about-me-header;
+  margin: 15px;
+  border-right: 5px solid darkblue;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#about-me-content {
+  grid-area: about-me-content;
+  margin: 15px;
+  /* border-bottom: 5px solid darkblue; */
+  padding: 10px 0px;
+  
+}
+ 
+#work-header {
+  grid-area: work-header;
+  margin: 15px;
+  border-right: 5px solid darkblue;  
+  text-align: right;
+  padding-right: 10px;
+} 
+
+.work {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 15px;
+  border: 3px dashed midnightblue;
+  display: grid;
+  align-content: end;
+}
+.work:hover {
+  background-color: yellow;
+}
+
+
+/* .work-img-1 {
+  height: 600px;
+} */
+
+#work-content1 {
+  /* display: contents; */
+  grid-area: work-content1;
+  background-image: url("/images/02-portfolio-4.jpg");
+}
+
+#work-content2 {
+  /* display: contents; */
+  grid-area: work-content2;
+  background-image: url("/images/02-portfolio-2.jpg");
+}
+
+#work-content3 {
+  /* display: contents; */
+  grid-area: work-content3;
+  background-image: url("/images/02-portfolio-3.jpg");
+}
+
+#work-content4 {
+  /* display: contents; */
+  grid-area: work-content4;
+  background-image: url("/images/02-portfolio-1.jpg");
+}
+
+#work-content5 {
+  /* display: contents; */
+  grid-area: work-content5;
+  background-image: url("/images/02-run-buddy.jpg");
+}
+
+.work-content-heading {
+  display: flex;
+  justify-content: left;
+  align-self: flex-end;
+  font-size: 40px;
+  color: rgb(20,20,255) ;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: auto;
+  border: 2px solid black;
+}
+
+
+img {
+  height: 300px;
+  border: 5px solid darkblue;
+  margin: 15px;
+}
+
+#contact-header {
+  grid-area: contact;
+  justify-content: right;
+  margin: 15px;
+  border-right: 5px solid darkblue;
+  padding-right: 10px;
+  text-align: right;
+}
+
+#contact-content {
+  grid-area: contact-content;
+  align-self: center;
+}
+
+#contact-content>ul {
+  justify-content: space-evenly;
+  
+}
+
+#contact-content>ul>li>a {
+  color: rgb(20, 20, 255);
+  font-size: 20px;
+  
 }
