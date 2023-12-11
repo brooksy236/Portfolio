@@ -57,7 +57,7 @@ a {
   display: flex;
   justify-content: space-between;
   height: auto;
-  background-image: url("./images/02-hero-bg.jpg");
+  background-image: url("../images/02-hero-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,7 +68,7 @@ a {
   display: flex;
   /* justify-content: left; */
   /* align-self: flex-end; */
-  background-image: url("./images/Profile1.JPG");
+  background-image: url("../images/Profile1.JPG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -178,31 +178,31 @@ main {
 #work-content1 {
   /* display: contents; */
   grid-area: work-content1;
-  background-image: url("./images/02-portfolio-4.jpg");
+  background-image: url("../images/02-portfolio-4.jpg");
 }
 
 #work-content2 {
   /* display: contents; */
   grid-area: work-content2;
-  background-image: url("./images/02-portfolio-2.jpg");
+  background-image: url("../images/02-portfolio-2.jpg");
 }
 
 #work-content3 {
   /* display: contents; */
   grid-area: work-content3;
-  background-image: url("./images/02-portfolio-3.jpg");
+  background-image: url("../images/02-portfolio-3.jpg");
 }
 
 #work-content4 {
   /* display: contents; */
   grid-area: work-content4;
-  background-image: url("./images/02-portfolio-1.jpg");
+  background-image: url("../images/02-portfolio-1.jpg");
 }
 
 #work-content5 {
   /* display: contents; */
   grid-area: work-content5;
-  background-image: url("./images/02-run-buddy.jpg");
+  background-image: url("../images/02-run-buddy.jpg");
 }
 
 .work-content-heading {
