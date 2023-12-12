@@ -17,38 +17,54 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1%;
-  background-color: darkslategray;
+  background-color: rgb(10, 80, 22);
   color: lightslategray;
 }
 
 header h1 {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(198, 199, 211);
   padding: 5px;
   border: 2px solid black;
+  color: black;
+  font-size: 48px;
 }
 
+#navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: ; */
+  width: 40%;
+}
 #navigation {
   display: flex;
-  align-items: center;
+  width: 50%;
   padding: 1%;
-}
-
+} 
+ 
 ul {
-  display: flex;
   justify-content: space-between;
   padding: 0 ;
   min-width: 300px;
 }
 
 li {
+  display: flex;
+  justify-self: space-between;
   display: inline;
   list-style-type: none;
-}
+} 
 
 a {
   text-decoration: none;
   color: cornsilk;
+  font-size: 20px;
+  text-decoration: wavy underline;
+  padding: 0px 15px;
+}
 
+a:hover {
+  color: yellow;
 }
 
 /* This section is for the hero banner */
@@ -66,8 +82,6 @@ a {
 
 #profile-pic {
   display: flex;
-  /* justify-content: left; */
-  /* align-self: flex-end; */
   background-image: url("../images/Profile1.JPG");
   background-position: center;
   background-repeat: no-repeat;
@@ -75,6 +89,7 @@ a {
   height: 200px;
   width: 200px;
   border: 2px solid black;
+  border-radius: 50%;
   padding: 10px;
 }
 
@@ -86,7 +101,9 @@ a {
   color: rgb(20,20,255) ;
   background-color: rgba(255, 255, 255, 0.5);
   height: auto;
+  padding: 5px 10px;
   border: 2px solid black;
+  border-radius: 15px;
 }
 
 h1,
@@ -108,7 +125,7 @@ p {
 /* Grid */
 
 main {
-  background-color: rgb(146,204,206);
+  background-color: rgb(48, 158, 103);
   border: 10px;
 }
 
@@ -157,19 +174,42 @@ main {
 } 
 
 .work {
+  position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+  text-decoration: none;
   margin: 15px;
-  border: 3px dashed midnightblue;
+  border: thick double midnightblue;
   display: grid;
   align-content: end;
-}
-.work:hover {
-  background-color: yellow;
+  justify-content: flex-start;
 }
 
+.work-content-heading {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content:space-around;
+  align-self: flex-end;
+  color: rgb(20,20,255) ;  
+  height: auto;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.work .work-content-heading {
+  transition: all 1s ease-in-out;
+}
+
+.work:hover,
+.work:hover .work-content-heading {
+  box-shadow: inset 0px 0px 8px rgba(32, 102, 236, 1), 0 0 15px rgba(32, 102, 236, 1);
+}
 
 /* .work-img-1 {
   height: 600px;
@@ -205,17 +245,13 @@ main {
   background-image: url("../images/02-run-buddy.jpg");
 }
 
-.work-content-heading {
-  display: flex;
-  justify-content: left;
-  align-self: flex-end;
-  font-size: 40px;
-  color: rgb(20,20,255) ;
-  background-color: rgba(255, 255, 255, 0.5);
-  height: auto;
-  border: 2px solid black;
+.work-content-heading>h3 {
+  font-size: 28px;
 }
 
+.work-content-heading>p {
+ font-size: 16px;
+}
 
 img {
   height: 300px;
@@ -238,6 +274,7 @@ img {
 }
 
 #contact-content>ul {
+  display: flex;
   justify-content: space-evenly;
   
 }
@@ -248,15 +285,20 @@ img {
   
 }
 
+#contact-content>ul>li>a:hover {
+  color: coral;
+
+}
+
 /* Tablet media query */
 @media screen and (mid-width: 768px) { 
  
   .page-wrapper {
     padding: 10px;
     display: grid;
-    grid-template-rows: 1fr 300px 300px 300px 300px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 300px 300px 300px 300px 1fr 1fr;
     /* grid-template-rows: min-content auto; */
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "about-me-header about-me-header"
         "about-me-content about-me-content"
@@ -265,7 +307,7 @@ img {
         "work-content1 work-content1"
         "work-content2 work-content3"
         "work-content4 work-content5"
-        "contact-header contact-header"
+        "contact contact"
         "contact-content contact-content";
   } 
     
@@ -273,13 +315,12 @@ img {
 
 
 /* Mobile media query */
-@media screen and (mid-width: 768px) { 
+/* @media screen and (mid-width: 768px) { 
  
 .page-wrapper {
   padding: 10px;
   display: grid;
   grid-template-rows: 1fr 300px 300px 300px 300px 1fr;
-  /* grid-template-rows: min-content auto; */
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas:
       "about-me-header about-me-header"
@@ -293,4 +334,4 @@ img {
       "contact-content contact-content";
 } 
   
-}
+} */
