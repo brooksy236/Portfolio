@@ -4,7 +4,7 @@ This is portfolio site with links to my work (coming soon), a profile picture an
 
 ## **User Story**
 
-As an up-and-coming Front-End Deveolper I WANT a site that showcases my work with links to it and my socials and has a profile picture.
+As an up-and-coming Front-End Developer I WANT a site that showcases my work with links to it and my socials and has a profile picture.
 
 ## **Site Link**
 
